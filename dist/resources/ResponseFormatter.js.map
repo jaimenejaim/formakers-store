@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../resources/ResponseFormatter.js"],"names":["ResponseFormatter"],"mappings":";;;;IAEMA,iB,GAEF,6BAAa;AAAA;AAEZ,C","file":"ResponseFormatter.js","sourcesContent":["\n\nclass ResponseFormatter {\n\n    constructor(){\n\n    }\n\n    \n}"]}

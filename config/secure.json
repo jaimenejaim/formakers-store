@@ -1,0 +1,10 @@
+{
+    "development": {
+        "api" : {
+        "secret_token" : "ASxp1ojnSNIcBQAa110uA10ia1f3"
+        }
+    },
+    "production": {
+        "use_env_variable": "SECRET_TOKEN"
+    }
+}
