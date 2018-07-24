@@ -1,9 +1,13 @@
-const express = require('express');
-const router = express.Router();
+const fs = require('fs');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+module.exports = (app) => {
+    // Read each file in the routes directory
+    fs.readdirSync(__dirname).forEach(route => {
+        // Strip the .js suffix
+        route = route.split('.')[0];
+        // Ignore index (i.e. this file)
+        if (route === 'index') return;
 
-module.exports = router;
+        app.use('/' + route, require('./'+route+'.js'));
+    });
+};
